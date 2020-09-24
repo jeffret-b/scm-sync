@@ -6,8 +6,14 @@
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.AuthorizationStrategy$Unsecured"/>
-  <securityRealm class="hudson.security.SecurityRealm$None"/>
+  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
+    <denyAnonymousReadAccess>false</denyAnonymousReadAccess>
+  </authorizationStrategy>
+  <securityRealm class="hudson.plugins.script_realm.ScriptSecurityRealm" plugin="script-realm@1.5">
+    <commandLine>/Users/jeffret/temp/script-realm/login.sh</commandLine>
+    <groupsCommandLine>/Users/jeffret/temp/script-realm/group.sh</groupsCommandLine>
+    <groupsDelimiter>,</groupsDelimiter>
+  </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULL_NAME}</workspaceDir>
