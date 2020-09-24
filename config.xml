@@ -12,7 +12,13 @@
   <securityRealm class="hudson.security.MixingSecurityRealm" plugin="mixing-security-realm@1.0.0">
     <disableSignup>false</disableSignup>
     <enableCaptcha>false</enableCaptcha>
-    <optionals/>
+    <optionals>
+      <hudson.plugins.script__realm.ScriptSecurityRealm plugin="script-realm@1.5">
+        <commandLine>/Users/jeffret/temp/script-realm/login.sh</commandLine>
+        <groupsCommandLine>/Users/jeffret/temp/script-realm/group.sh</groupsCommandLine>
+        <groupsDelimiter>,</groupsDelimiter>
+      </hudson.plugins.script__realm.ScriptSecurityRealm>
+    </optionals>
     <priority>true</priority>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>

@@ -1,4 +1,10 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson.security.MixingSecurityRealm_-DescriptorImpl plugin="mixing-security-realm@1.0.0">
-  <optionals/>
+  <optionals>
+    <hudson.plugins.script__realm.ScriptSecurityRealm plugin="script-realm@1.5">
+      <commandLine>/Users/jeffret/temp/script-realm/login.sh</commandLine>
+      <groupsCommandLine>/Users/jeffret/temp/script-realm/group.sh</groupsCommandLine>
+      <groupsDelimiter>,</groupsDelimiter>
+    </hudson.plugins.script__realm.ScriptSecurityRealm>
+  </optionals>
 </hudson.security.MixingSecurityRealm_-DescriptorImpl>
