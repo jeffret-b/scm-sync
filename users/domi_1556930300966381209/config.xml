@@ -41,7 +41,12 @@
     </hudson.search.UserSearchProperty>
     <hudson.model.TimeZoneProperty/>
     <jenkins.security.LastGrantedAuthoritiesProperty>
-      <timestamp>0</timestamp>
+      <roles>
+        <string>authenticated</string>
+        <string>admin</string>
+        <string>superuser</string>
+      </roles>
+      <timestamp>1600977951339</timestamp>
     </jenkins.security.LastGrantedAuthoritiesProperty>
   </properties>
 </user>
