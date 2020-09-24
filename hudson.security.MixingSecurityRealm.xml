@@ -6,5 +6,6 @@
       <groupsCommandLine>/Users/jeffret/temp/script-realm/group.sh</groupsCommandLine>
       <groupsDelimiter>,</groupsDelimiter>
     </hudson.plugins.script__realm.ScriptSecurityRealm>
+    <hudson.security.SecurityRealm_-None/>
   </optionals>
 </hudson.security.MixingSecurityRealm_-DescriptorImpl>
