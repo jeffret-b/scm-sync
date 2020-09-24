@@ -9,10 +9,11 @@
   <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
     <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
   </authorizationStrategy>
-  <securityRealm class="hudson.plugins.script_realm.ScriptSecurityRealm" plugin="script-realm@1.5">
-    <commandLine>/Users/jeffret/temp/script-realm/login.sh</commandLine>
-    <groupsCommandLine>/Users/jeffret/temp/script-realm/group.sh</groupsCommandLine>
-    <groupsDelimiter>,</groupsDelimiter>
+  <securityRealm class="hudson.security.MixingSecurityRealm" plugin="mixing-security-realm@1.0.0">
+    <disableSignup>false</disableSignup>
+    <enableCaptcha>false</enableCaptcha>
+    <optionals/>
+    <priority>true</priority>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
