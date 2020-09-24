@@ -1,9 +1,20 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
+  <description></description>
   <keepDependencies>false</keepDependencies>
-  <properties/>
+  <properties>
+    <org.jenkinsci.plugins.dryrun.DryRunJobProperty plugin="dry-run@0.9">
+      <on>true</on>
+      <enableRunListeners>true</enableRunListeners>
+      <enableSCM>true</enableSCM>
+      <enableTriggers>true</enableTriggers>
+      <enableBuildWrappers>true</enableBuildWrappers>
+      <enableBuilders>true</enableBuilders>
+      <enablePublishers>true</enablePublishers>
+    </org.jenkinsci.plugins.dryrun.DryRunJobProperty>
+  </properties>
   <scm class="hudson.scm.NullSCM"/>
-  <canRoam>false</canRoam>
+  <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
